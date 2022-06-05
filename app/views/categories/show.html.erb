@@ -1,0 +1,12 @@
+<h1>Categorias</h1>
+
+<ul>
+  <% @category.each do |post| %>
+    <li>
+      <a href="<%= post_path(post) %>">
+        <%= post.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
