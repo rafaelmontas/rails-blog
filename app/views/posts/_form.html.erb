@@ -1,21 +1,22 @@
 <%= form_with model: post, id: dom_id(post, "form") do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+  <h3>Publicar articulo</h3>
+  <div class="mb-3">
+    <%= form.label :título, class: "form-label" %><br>
+    <%= form.text_field :title, class: "form-control" %>
     <% @post.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
+    <%= form.label :cuerpo, class: "form-label" %><br>
+    <%= form.text_area :body, class: "form-control" %>
     <% @post.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div style="margin-top: 20px">
+    <%= form.submit :Publicar %>
   </div>
 <% end %>

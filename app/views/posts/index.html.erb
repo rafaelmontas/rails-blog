@@ -1,8 +1,16 @@
-<h1>Posts</h1>
-
-<%= turbo_frame_tag "new-post-form", src: new_post_path %>
-
-<div id="posts">
-  <%= render @posts %>
+<main class="container-xxl">
+<div class="row">
+  <div class="col-md-8">
+    <h3>Artículos publicados</h3>
+    <div id="posts">
+      <%= render @posts %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="wrapper">
+      <%= turbo_frame_tag "new-post-form", src: new_post_path %>
+    </div>
+  </div>
 </div>
+</main>
 

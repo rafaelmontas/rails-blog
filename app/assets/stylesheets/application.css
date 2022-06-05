@@ -13,3 +13,77 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   padding-top: 56px;
+   background-color: #f1f1f1;
+ }
+ nav.navbar .container-xxl a.navbar-brand, ul > li.nav-item.dropdown > a {
+  color: #fff;
+}
+nav.navbar .container-xxl button.navbar-toggler {
+  color: #fff;
+  background-color: #fff;
+}
+nav.navbar .container-xxl .navbar-collapse form input {
+  min-width: 400px;
+}
+nav.navbar .container-xxl .navbar-collapse form button {
+  background-color: #FACC00;
+  border-color: #FACC00;
+  color: #1D477A;
+}
+main {
+  margin-top: 30px;
+}
+main .col-md-8 {
+  padding-top: 20px;
+}
+main h3 {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e3e3e3;
+}
+main #posts .blog-post {
+  margin-bottom: 25px;
+  padding: 20px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 10%);
+  border-radius: 4px;
+  background-color: #fff;
+}
+main #posts .blog-post a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+main #posts .blog-post a p:last-child {
+  margin-bottom: 0px;
+}
+main #posts .blog-post a h4 {
+  margin-bottom: 5px;
+}
+main #posts .blog-post a p.post-meta {
+  color: #727272;
+  margin-bottom: 10px;
+}
+main .col-md-4 .wrapper {
+  position: sticky;
+  top: 80px;
+}
+main .col-md-4 form {
+  padding: 20px;
+  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 10%);
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+  main .row {
+    flex-direction: column-reverse;
+  }
+  main .col-md-4 {
+    margin-bottom: 30px;
+  }
+}
+
