@@ -1,6 +1,15 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    if params[:query].present?
+      @posts = Post.where("title LIKE ?", "%#{params[:query]}%")
+    else
+      @posts = Post.all
+    end
+    if turbo_frame_request?
+      render partial: "list-posts", locals: { posts: @posts }
+    else
+      render "index"
+    end
   end
 
   def show

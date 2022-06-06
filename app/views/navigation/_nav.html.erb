@@ -28,10 +28,10 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-      </form>
+      <%= form_with(url: posts_path, method: "GET", data: { turbo_frame: "list-posts", turbo_action: "advance" }, class: "d-flex") do |form| %>
+        <%= form.search_field :query, class: "form-control me-2", placeholder: "Buscar" %>
+        <%= form.button 'Buscar', class: "btn btn-outline-success" %>
+      <% end %>
     </div>
   </div>
 </nav>
