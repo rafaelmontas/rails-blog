@@ -3,7 +3,7 @@ class CreatePosts < ActiveRecord::Migration[7.0]
     create_table :posts do |t|
       t.string :title
       t.string :body
-      t.string :tags
+      t.string :tags, array: true, default: []
       t.references :category_name, type: :string, references: :categories, null: true
 
       t.timestamps

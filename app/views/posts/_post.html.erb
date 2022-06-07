@@ -1,6 +1,6 @@
 
 <article class="blog-post">
-  <a href="<%= post_path(post) %>">
+  <a href="<%= post_path(post) %>" data-turbo-frame="_top">
     <h4><%= post.title %></h4>
     <p class="post-meta"><%= post.created_at %></p>
     <p><%= post.body %></p>
