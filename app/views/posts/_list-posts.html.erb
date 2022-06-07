@@ -1,5 +1,6 @@
-<%= turbo_frame_tag "list-posts" do %>
+<%= turbo_frame_tag "list-posts", data: { turbo_action: "advance" } do %>
   <div id="posts">
     <%= render posts %>
+    <%== pagy_bootstrap_nav(@pagy) %>
   </div>
 <% end %>

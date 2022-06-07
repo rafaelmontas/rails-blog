@@ -1,14 +1,14 @@
 <main class="container-xxl">
-<div class="row">
-  <div class="col-md-8">
-    <h3>Artículos publicados</h3>
-    <%= render "list-posts", posts: @posts %>
-  </div>
-  <div class="col-md-4">
-    <div class="wrapper">
-      <%= turbo_frame_tag "new-post-form", src: new_post_path %>
+  <div class="row">
+    <div class="col-md-8">
+      <h3>Artículos publicados</h3>
+      <%= render "list-posts", posts: @posts %>
+    </div>
+    <div class="col-md-4">
+      <div class="wrapper">
+        <%= turbo_frame_tag "new-post-form", src: new_post_path %>
+      </div>
     </div>
   </div>
-</div>
 </main>
 

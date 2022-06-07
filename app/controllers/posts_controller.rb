@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
   def index
     if params[:query].present?
-      @posts = Post.where("title LIKE ? OR body LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
+      @pagy, @posts = pagy(Post.where("title LIKE ? OR body LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%"), items: 1)
     else
-      @posts = Post.all
+      @pagy, @posts = pagy(Post.all, items: 2)
     end
     if turbo_frame_request?
       render partial: "list-posts", locals: { posts: @posts }
