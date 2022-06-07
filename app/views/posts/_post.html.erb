@@ -5,4 +5,12 @@
     <p class="post-meta"><%= post.created_at %></p>
     <p><%= post.body %></p>
   </a>
+  <div class="post-footer">
+    <span>Categoría: <a href="/categories/<%= post.category_name %>" data-turbo-frame="_top"><%= post.category_name %></a></span>
+    <div class="tags">
+    Tags:
+      <span><a href="/tags/Sol" data-turbo-frame="_top">Sol</a></span>
+      <span><a href="/tags/Arena" data-turbo-frame="_top">Arena</a></span>
+    </div>
+  </div>
 </article>

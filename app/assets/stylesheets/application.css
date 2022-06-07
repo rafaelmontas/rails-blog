@@ -67,6 +67,31 @@ main #posts .blog-post a p.post-meta {
   color: #727272;
   margin-bottom: 10px;
 }
+main #posts .blog-post .post-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding-top: 15px;
+  border-top: 1px solid #e3e3e3;
+}
+main #posts .blog-post .post-footer span {
+  display: flex;
+}
+main #posts .blog-post .post-footer span a {
+  margin-left: 5px;
+}
+main #posts .blog-post .post-footer .tags {
+  display: flex;
+}
+main #posts .blog-post .post-footer .tags span {
+  margin-right: 5px;
+}
+main #posts .blog-post .post-footer .tags span:first-child {
+  margin-left: 5px;
+}
+main #posts .blog-post .post-footer .tags span:last-child {
+  margin-right: 0;
+}
 main .col-md-4 .wrapper {
   position: sticky;
   top: 80px;

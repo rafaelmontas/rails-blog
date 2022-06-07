@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_05_175554) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_06_163235) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -37,13 +37,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_05_175554) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "categories", id: false, force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "body"
     t.string "tags"
-    t.string "category"
+    t.string "category_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_name"], name: "index_posts_on_category_name"
   end
 
 end

@@ -4,9 +4,10 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       t.string :title
       t.string :body
       t.string :tags
-      t.string :category
+      t.references :category_name, type: :string, references: :categories, null: true
 
       t.timestamps
     end
+    rename_column :posts, :category_name_id, :category_name
   end
 end
