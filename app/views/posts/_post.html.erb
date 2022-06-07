@@ -9,8 +9,9 @@
     <span>Categoría: <a href="/categories/<%= post.category_name %>" data-turbo-frame="_top"><%= post.category_name %></a></span>
     <div class="tags">
     Tags:
-      <span><a href="/tags/Sol" data-turbo-frame="_top">Sol</a></span>
-      <span><a href="/tags/Arena" data-turbo-frame="_top">Arena</a></span>
+      <% post.tags.each do |tag| %>
+        <span><a href="/tags/<%= tag %>" data-turbo-frame="_top"><%= tag %></a></span>
+      <% end %>
     </div>
   </div>
 </article>
