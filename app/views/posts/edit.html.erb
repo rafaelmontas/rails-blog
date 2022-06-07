@@ -1,6 +1,12 @@
-
 <%= turbo_frame_tag "post" do %>
-  <h1>Edit Post</h1>
-  <%= render "form", post: @post %>
-  <li><%= link_to "Back", post_path(@post) %></li>
+  <main class="container-xxl">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Editar Artículo</h1>
+        <%= render "form", post: @post %>
+        <%= link_to "Back", post_path(@post) %>
+      </div>
+    </div>
+  </main>
 <% end %>
+

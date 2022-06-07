@@ -95,11 +95,25 @@ main .col-md-4 .wrapper {
   position: sticky;
   top: 80px;
 }
-main .col-md-4 form {
+main .col-md-4 .inner {
   padding: 20px;
   box-shadow: 0 4px 16px 0 rgb(0 0 0 / 10%);
   background-color: #fff;
   border-radius: 4px;
+}
+/* Post */
+main .col-md-12 .post-header {
+  display: flex;
+  justify-content: space-between;
+}
+main .col-md-12 .post-header .post-actions {
+  display: flex;
+}
+main .col-md-12 .post-header .post-actions a {
+  margin-right: 10px;
+}
+main .col-md-12 .post-header .post-actions a:last-child {
+  margin-right: 0px;
 }
 
 @media only screen and (max-width: 768px) {

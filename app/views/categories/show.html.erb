@@ -1,12 +1,13 @@
-<h1>Categorias</h1>
-
-<ul>
-  <% @category.each do |post| %>
-    <li>
-      <a href="<%= post_path(post) %>">
-        <%= post.title %>
-      </a>
-    </li>
-  <% end %>
-</ul>
+<main class="container-xxl">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Artículos con categoría: <%= @category_name %></h3>
+      <% @category.each do |post| %>
+        <div id="posts">
+          <%= render :partial => 'posts/post', :locals => { :post => post } %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</main>
 

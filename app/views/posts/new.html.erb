@@ -1,6 +1,12 @@
-<h1>New Post</h1>
-
-# Passing the article to the partial as a local variable
-<%= turbo_frame_tag "new-post-form", class: "w-full" do %>
-  <%= render "form", post: @post %>
-<% end %>
+<main class="container-xxl">
+  <div class="row">
+    <div class="col-md-12">
+      <%= turbo_frame_tag "new-post-form", class: "w-full" do %>
+        <div class="inner">
+          <h3>Publicar artículo</h3>
+          <%= render "form", post: @post %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</main>

@@ -1,12 +1,13 @@
-<h1>Tags</h1>
-
-<ul>
-  <% @tag.each do |post| %>
-    <li>
-      <a href="<%= post_path(post) %>">
-        <%= post.title %>
-      </a>
-    </li>
-  <% end %>
-</ul>
+<main class="container-xxl">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Artículos con tag: <%= @tag_name %></h3>
+      <% @tag.each do |post| %>
+        <div id="posts">
+          <%= render :partial => 'posts/post', :locals => { :post => post } %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</main>
 
